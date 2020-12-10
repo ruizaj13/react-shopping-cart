@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
 import data from './data';
 
@@ -20,8 +20,8 @@ function App() {
 
 	return (
 		<div className="App">
-			<CartContext.provider value={{cart}}>
-				
+			<CartContext.Provider value={{cart}}>
+
 				<Navigation/>
 
 				<ProductContext.Provider value={{products, addItem}}>
@@ -35,7 +35,7 @@ function App() {
 					<ShoppingCart/>
 				</Route>
 
-			</CartContext.provider>
+			</CartContext.Provider>
 		</div>
 	);
 }
